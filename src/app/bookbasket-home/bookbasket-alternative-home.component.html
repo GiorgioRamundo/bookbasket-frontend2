@@ -1,0 +1,67 @@
+
+
+<header>
+  <div class="overlay"></div>
+  <video playsinline="playsinline" [muted] = "'muted'" autoplay = "autoplay" loop = "loop">
+    <source src="https://srv-store2.gofile.io/download/y4YNyl/d75384cd8234ff7bbbfec739227af810/Walking%20in%20a%20Library_%20Optokinetic%20Training%20(2_02).mp4" type="video/mp4">
+  </video>
+  <div class="container h-100">
+
+    <div class="text-center" style="margin-top: 180px">
+      <div class='thumbnail' style='background-color: transparent'>
+        <img src="https://i.ibb.co/TtHFJCh/logo.png" class="img-fluid" alt="Responsive image">
+      </div>
+    </div>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <div class="container" id ="main-container">
+      <br/>
+      <div class="d-flex justify-content-center align-items-center">
+        <div class="col-12 col-md-10 col-lg-8">
+          <form class="card card-sm">
+            <div class="card-body row no-gutters align-items-center">
+              <div class="col-auto">
+                <i class="fas fa-search h4 text-body"></i>
+              </div>
+              <!--end of col-->
+              <div class="col">
+                <input class="form-control form-control-lg form-control-borderless" type="search" name ="title" [(ngModel)]="title" placeholder="Cerca tra migliaia di libri nelle vicinanze">
+              </div>
+              <!--end of col-->
+              <div class="col-auto">
+                <button class="btn btn-lg btn-primary" type="submit" (click)="(onSubmit()) ">Search</button>
+              </div>
+              <!--end of col-->
+            </div>
+          </form>
+        </div>
+        <!--end of col-->
+      </div>
+    </div>
+    <div class="mx-auto" style="width: 350px; padding-top: 40px;">
+      <div class="btn-group" role="group" aria-label="Basic example">
+        <button type="button" class="btn btn-lg btn-primary btn-space" (click)="onOpenModal('about')">About</button>
+        <button type="button" class="btn btn-lg btn-primary btn-space" routerLink="/register">Sign up</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="modal fade" id="aboutModal" tabindex="-1" role="dialog" aria-labelledby="aboutModal" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="aboutModalLabel">About Bookbasket</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <img src="https://i.ibb.co/PZfH02g/logo.png" style="max-width:400px; padding-bottom:40px;">
+        <p>Bookbasket è un servizio di scambio, vendita e dono di libri tra privati</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+

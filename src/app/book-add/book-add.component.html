@@ -1,0 +1,52 @@
+
+<body>
+<h3>Add a book</h3>
+<div [hidden]="submitted" style="width: 300px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="isbn">ISBN</label>
+      <input type="text" class="form-control" id="isbn" required [(ngModel)]="book.isbn" name="isbn">
+    </div>
+    <div class="form-group">
+      <label for="title">Titolo</label>
+      <input type="text" class="form-control" id="title" required [(ngModel)]="book.title" name="title">
+    </div>
+    <div class="form-group">
+      <label for="author">Autore</label>
+      <input type="text" class="form-control" id="author" required [(ngModel)]="book.author" name="author">
+    </div>
+
+    <div class="form-group">
+      <label for="genre">Genere</label>
+      <input type="text" class="form-control" id="genre" required [(ngModel)]="book.genre" name="genre">
+    </div>
+
+    <div class="form-group">
+      <label for="editor">Editore</label>
+      <input type="text" class="form-control" id="editor" required [(ngModel)]="book.editor" name="editor">
+    </div>
+
+    <div class="form-group">
+      <label for="editor">Anno</label>
+      <input type="text" class="form-control" id="year" required [(ngModel)]="book.year" name="year">
+    </div>
+
+    <div class="form-group">
+      <label for="editor">Stato della copia</label>
+      <input type="text" class="form-control" id="status" required [(ngModel)]="book.status" name="status">
+    </div>
+
+    <div class="form-group">
+      <label for="editor">URL Copertina</label>
+      <input type="text" class="form-control" id="cover" required [(ngModel)]="book.cover" name="status">
+    </div>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
+
+<div [hidden]="!submitted">
+  <h4>Libro aggiunto con successo!</h4>
+  <button class="btn btn-success" (click)="newBook()">Add</button>
+</div>
+</body>

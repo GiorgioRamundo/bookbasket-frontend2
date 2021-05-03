@@ -1,0 +1,24 @@
+<body>
+
+<h1>I miei basket</h1>
+<div class="container" id ="main-container">
+  <div class="row">
+    <div *ngFor="let basket of baskets | async" class="col-md-6 col-xl-3">
+      <div class="card m-b-30">
+        <div class="card-body row">
+          <div class="col-6 card-title align-self-center mb-0">
+            <h5>{{basket?.name}}</h5>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="float-right btn-group btn-group-sm">
+            <a (click)="(showBooks(basket?.id))" class="btn btn-secondary tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Edit">Libri in questo basket</a>
+            <a (click)="(null)" class="btn btn-secondary tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Delete">Rimuovi</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
